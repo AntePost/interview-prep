@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picture</title>
+    <style>
+        .wrapper {
+            height: 500px;
+            background-color: cornflowerblue;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .house {
+            width: 100px;
+            height: 100px;
+            background-color: saddlebrown;
+            position: absolute;
+            bottom: 0;
+            margin-left: 400px;
+        }
+
+        .roof {
+            width: 0;
+            height: 0;
+            border-left: 50px solid transparent;
+            border-right: 50px solid transparent;
+            border-bottom: 100px solid coral;
+            position: absolute;
+            bottom: 100px;
+            margin-left: 400px;
+        }
+        
+        .cloud-wrapper {
+            width: 100%;
+        }
+
+        .one {
+            animation: drift 25s linear infinite;
+        }
+
+        .two {
+            animation: drift 10s linear infinite;
+        }
+
+        .three {
+            animation: drift 15s linear infinite;
+        }
+        
+        .cloud {
+            background-color: whitesmoke;
+            position: absolute;
+        }
+
+        .first {
+            width: 100px;
+            height: 50px;
+            left: -100px;
+            top: 50px;
+        }
+
+        .second {
+            width: 25px;
+            height: 15px;
+            left: -25px;
+            top: 150px;
+        }
+
+        .third {
+            width: 50px;
+            height: 35px;
+            left: -50px;
+            top: 200px;
+        }
+
+        @keyframes drift {
+            0% {opacity: 1;transform: translateX(0);}
+            100% {opacity: 1;transform: translateX(105%);}
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="house"></div>
+        <div class="roof"></div>
+
+        <div class="cloud-wrapper one">
+            <div class="cloud first"></div>
+        </div>
+        <div class="cloud-wrapper two">
+            <div class="cloud second"></div>
+        </div>
+        <div class="cloud-wrapper three">
+            <div class="cloud third"></div>
+        </div>
+    </div>
+</body>
+</html>
